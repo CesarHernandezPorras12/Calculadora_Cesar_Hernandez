@@ -36,7 +36,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline207"
         app:layout_constraintEnd_toStartOf="@+id/guideline104"
         app:layout_constraintStart_toStartOf="@+id/guideline103"
-        app:layout_constraintTop_toTopOf="@+id/guideline206" />
+        app:layout_constraintTop_toTopOf="@+id/guideline206"
+        android:onClick="EscribirComa"/>
 
     <Button
         android:id="@+id/btncero"
@@ -74,47 +75,53 @@
 
     <Button
         android:id="@+id/btntres"
-        android:layout_width="0dp"
-        android:backgroundTint="@color/botones"
-        android:layout_height="0dp"
+        android:layout_width="86dp"
+        android:layout_height="100dp"
         android:layout_margin="5dp"
+        android:backgroundTint="@color/botones"
         android:onClick="EscribirTres"
-        app:cornerRadius="50dp"
-        android:textSize="40dp"
         android:text="3"
+        android:textSize="40dp"
+        app:cornerRadius="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline206"
         app:layout_constraintEnd_toStartOf="@+id/guideline104"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="@+id/guideline103"
-        app:layout_constraintTop_toTopOf="@+id/guideline205" />
+        app:layout_constraintTop_toTopOf="@+id/guideline205"
+        app:layout_constraintVertical_bias="0.083" />
 
     <Button
         android:id="@+id/btndos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="82dp"
+        android:layout_height="100dp"
         android:backgroundTint="@color/botones"
         android:onClick="EscribirDos"
-        app:cornerRadius="50dp"
-        android:textSize="40dp"
         android:text="2"
+        android:textSize="40dp"
+        app:cornerRadius="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline206"
         app:layout_constraintEnd_toStartOf="@+id/guideline103"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline102"
-        app:layout_constraintTop_toTopOf="@+id/guideline205" />
+        app:layout_constraintTop_toTopOf="@+id/guideline205"
+        app:layout_constraintVertical_bias="0.375" />
 
     <Button
         android:id="@+id/btnuno"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:backgroundTint="@color/botones"
+        android:layout_width="78dp"
+        android:layout_height="98dp"
         android:layout_margin="5dp"
+        android:backgroundTint="@color/botones"
         android:onClick="EscribirUno"
-        app:cornerRadius="50dp"
-        android:textSize="40dp"
         android:text="1"
+        android:textSize="40dp"
+        app:cornerRadius="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline206"
         app:layout_constraintEnd_toStartOf="@+id/guideline102"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="@+id/guideline101"
-        app:layout_constraintTop_toTopOf="@+id/guideline205" />
+        app:layout_constraintTop_toTopOf="@+id/guideline205"
+        app:layout_constraintVertical_bias="0.285" />
 
     <Button
         android:id="@+id/btnproducto"
@@ -125,7 +132,7 @@
         android:onClick="OperacionProducto"
         android:text="x"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="30dp"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline204"
         app:layout_constraintEnd_toStartOf="@+id/guideline105"
@@ -299,14 +306,15 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         app:cornerRadius="50dp"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:text="+/-"
         app:layout_constraintBottom_toTopOf="@+id/guideline203"
         app:layout_constraintEnd_toStartOf="@+id/guideline103"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline102"
         app:layout_constraintTop_toTopOf="@+id/guideline202"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="CambiarSigno"/>
 
     <Button
         android:id="@+id/btnporcentaje"
@@ -321,7 +329,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline203"
         app:layout_constraintEnd_toStartOf="@+id/guideline104"
         app:layout_constraintStart_toStartOf="@+id/guideline103"
-        app:layout_constraintTop_toTopOf="@+id/guideline202" />
+        app:layout_constraintTop_toTopOf="@+id/guideline202"
+        android:onClick="OperacionPorcentaje"/>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline101"
@@ -335,7 +345,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline103"
@@ -356,7 +366,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.96" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline201"
@@ -391,7 +401,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
+        app:layout_constraintGuide_percent="0.59" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline206"
