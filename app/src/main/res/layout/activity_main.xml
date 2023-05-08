@@ -112,7 +112,7 @@
         android:layout_height="98dp"
         android:layout_margin="5dp"
         android:backgroundTint="@color/botones"
-        android:onClick="EscribirUno"
+        android:onClick="escribirUno"
         android:text="1"
         android:textSize="40dp"
         app:cornerRadius="50dp"

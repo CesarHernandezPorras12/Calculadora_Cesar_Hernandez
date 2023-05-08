@@ -5,19 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tvResultado;
-    private float numero1;
-    float valor = numero1;
-
-    private float numero2;
-    float valor2 = numero2;
-    String operacion = "";
-
-    float valorPorcentaje = 0f;
+    ArrayList<Float> numeros = new ArrayList<>();
+    String operacionActual = "";
+    float resultadoActual = 0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,201 +20,71 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tvResultado = findViewById(R.id.tvResultado);
-        numero1 = 0f;
-        numero2 = 0f;
+        tvResultado.setText("0");
     }
 
-    public void EscribiSiete(View view) {
+    public void EscribirNumero(View view) {
         String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-7");
+        String nuevoValor = "";
+
+        switch (view.getId()) {
+            case R.id.btncero:
+                nuevoValor = "0";
+                break;
+            case R.id.btnuno:
+                nuevoValor = "1";
+                break;
+            case R.id.btndos:
+                nuevoValor = "2";
+                break;
+            case R.id.btntres:
+                nuevoValor = "3";
+                break;
+            case R.id.btncuatro:
+                nuevoValor = "4";
+                break;
+            case R.id.btncinco:
+                nuevoValor = "5";
+                break;
+            case R.id.btnseis:
+                nuevoValor = "6";
+                break;
+            case R.id.btnsiete:
+                nuevoValor = "7";
+                break;
+            case R.id.btnocho:
+                nuevoValor = "8";
+                break;
+            case R.id.btnnueve:
+                nuevoValor = "9";
+                break;
+        }
+
+        if (currentValue.equals("0") && !nuevoValor.equals(".")) {
+            tvResultado.setText(nuevoValor);
         } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("7");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "7");
-            }
+            tvResultado.setText(currentValue + nuevoValor);
         }
     }
 
-    public void EscribiOcho(View view) {
+    public void EscribirPunto(View view) {
         String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-8");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("8");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "8");
-            }
-        }
-    }
 
-    public void Escribircero(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-0");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("0");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "0");
-            }
-        }
-    }
-
-
-    public void EscribirNueve(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-9");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("9");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "9");
-            }
-        }
-    }
-
-    public void EscribirCuatro(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-4");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("4");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "4");
-            }
-        }
-    }
-
-    public void EscribirCinco(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-5");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("5");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "5");
-            }
-        }
-    }
-
-    public void EscribirSeis(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-6");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("6");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "6");
-            }
-        }
-    }
-
-    public void EscribirUno(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-1");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("1");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "1");
-            }
-        }
-    }
-
-    public void EscribirDos(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-2");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("2");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "2");
-            }
-        }
-    }
-
-    public void EscribirTres(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (currentValue.equals("-")) {
-            tvResultado.setText("-3");
-        } else {
-            numero1 = Float.parseFloat(currentValue);
-            if (numero1 == 0.0f){
-                tvResultado.setText("3");
-            }else {
-                tvResultado.setText(tvResultado.getText() + "3");
-            }
+        if (!currentValue.contains(".")) {
+            tvResultado.setText(currentValue + ".");
         }
     }
 
     public void LimpiarResultado(View view) {
         tvResultado.setText("0");
-        numero1 = 0f;
-        numero2 = 0f;
-        operacion = "";
-    }
-
-    public void OperacionDividir(View view) {
-        valor = Float.parseFloat(tvResultado.getText().toString());
-        operacion = "/";
-        tvResultado.setText("0");
-
-    }
-    public void OperacionProducto(View view){
-        valor = Float.parseFloat(tvResultado.getText().toString());
-        operacion = "*";
-        tvResultado.setText("0");
-    }
-    public void OperacionResta(View view){
-        valor = Float.parseFloat(tvResultado.getText().toString());
-        operacion = "-";
-        tvResultado.setText("-");
-    }
-
-    public void OperacionSuma(View view){
-        valor = Float.parseFloat(tvResultado.getText().toString());
-        operacion = "+";
-        tvResultado.setText("0");
-    }
-
-    public void OperacionPorcentaje(View view) {
-        float valorActual = Float.parseFloat(tvResultado.getText().toString());
-        valorPorcentaje = valorActual / 100f;
-        operacion = "%";
-        tvResultado.setText("0");
-    }
-
-    public void EscribirComa(View view) {
-        String currentValue = tvResultado.getText().toString();
-        if (!currentValue.contains(".")) {
-            if (currentValue.equals("0")) {
-                tvResultado.setText("0.");
-            } else {
-                tvResultado.setText(currentValue + ".");
-            }
-        }
+        numeros.clear();
+        operacionActual = "";
+        resultadoActual = 0f;
     }
 
     public void CambiarSigno(View view) {
         String currentValue = tvResultado.getText().toString();
+
         if (!currentValue.isEmpty() && !currentValue.equals("0")) {
             float valorActual = Float.parseFloat(currentValue);
             float valorNegativo = valorActual * (-1);
@@ -227,30 +92,37 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void RealizarOperacion(View view) {
+        float valorActual = Float.parseFloat(tvResultado.getText().toString());
+        numeros.add(valorActual);
+        tvResultado.setText("0");
+
+        switch (view.getId()) {
+            case R.id.btnmas:
+                operacionActual = "+";
+                break;
+            case R.id.btnmenos:
+                operacionActual = "-";
+                break;
+            case R.id.btnproducto:
+                operacionActual = "*";
+                break;
+            case R.id.btndivision:
+                operacionActual = "/";
+                break;
+        }
+    }
+
     public void MostrarResultado(View view) {
-        valor2 = Float.parseFloat(tvResultado.getText().toString());
-        if (operacion.equals("-")){
-            float result = valor - valor2;
-            tvResultado.setText(result + "");
-        } else if (operacion.equals("*")) {
-            float result = valor * valor2;
-            tvResultado.setText(result + "");
-        } else if (operacion.equals("+")) {
-            float result = valor + valor2;
-            tvResultado.setText(result + "");
-        } else if (operacion.equals("%")) {
-            float result = valor * valorPorcentaje;
-            tvResultado.setText(result + "");
-        } else if (operacion.equals("/")) {
-            if (valor2 == 0f){
-                tvResultado.setText("0");
-                Toast.makeText(this, "Reingresa Operación", Toast.LENGTH_LONG).show();
-            } else{
-                float result = valor / valor2;
-                tvResultado.setText(result + "");
+        float valorActual = Float.parseFloat(tvResultado.getText().toString());
+        numeros.add(valorActual);
+
+        for (int i = 0; i < numeros.size(); i++) {
+            float numeroActual = numeros.get(i);
+
+            if (operacionActual.equals("+")) {
+                resultadoActual += numeroActual;
             }
         }
     }
 }
-
-
