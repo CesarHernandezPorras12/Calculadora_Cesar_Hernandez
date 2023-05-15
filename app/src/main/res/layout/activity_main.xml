@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline104"
         app:layout_constraintStart_toStartOf="@+id/guideline103"
         app:layout_constraintTop_toTopOf="@+id/guideline206"
-        android:onClick="EscribirComa"/>
+        android:onClick="EscribirPunto"/>
 
     <Button
         android:id="@+id/btncero"
