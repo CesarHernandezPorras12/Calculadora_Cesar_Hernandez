@@ -10,8 +10,6 @@
     import net.objecthunter.exp4j.Expression;
     import net.objecthunter.exp4j.ExpressionBuilder;
 
-    import java.util.ArrayList;
-
     public class MainActivity extends AppCompatActivity {
 
         TextView tvResultado;
@@ -71,7 +69,7 @@
             }
         }
 
-        public void EscribirComa(View view) {
+        public void EscribirPunto(View view) {
             String currentValue = tvResultado.getText().toString();
 
             if (!currentValue.contains(".")) {
